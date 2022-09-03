@@ -48,6 +48,11 @@ public class LongestCommonPrefix {
     return strs[0];
   }
 
+  /**
+   * Binary search
+   * @param strs
+   * @return
+   */
   public static String longestCommonPrefix(String[] strs) {
     if (strs == null || strs.length == 0) return "";
     int minLen = Integer.MAX_VALUE;
