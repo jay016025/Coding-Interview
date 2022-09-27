@@ -29,6 +29,13 @@ public class ValidSudoku {
       for (int j = 0; j < board[0].length; j++) {
         char c = board[i][j];
         if (c == '.') continue;
+
+        /*
+          將子矩陣的索引值變成一行
+          ...
+          ... -> .........
+          ...
+         */
         int k = i / 3 * 3 + j / 3;
         int cIndex = c - '0' - 1;
         if (row[i][cIndex] || col[j][cIndex] || cube[k][cIndex]) return false;
